@@ -1,0 +1,4 @@
+<div *ngFor="let phone of userPhoneNumbers" class="phone-primary">
+  <p>{{phone.value}}</p>
+  <span *ngIf="phone.isPrimary" class="primary-label">Primary</span>
+</div>

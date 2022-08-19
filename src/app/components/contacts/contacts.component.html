@@ -1,0 +1,201 @@
+<div class="main-content-wrapper">
+  <div class="contact-left-sidebar">
+    <div class="top-sidebar">
+      <nav class="navbar">
+        <div class="topleft-content">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbaricon">
+              <svg
+                viewBox="0 0 14 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.25 0.5H13.75V2.01172H0.25V0.5ZM0.25 5.73828V4.26172H13.75V5.73828H0.25ZM0.25 9.5V7.98828H13.75V9.5H0.25Z"
+                  fill="#8083A3"
+                />
+              </svg>
+            </span>
+          </button>
+          <h3 class="contact-title">Contacts</h3>
+        </div>
+        <div class="top-right-content">
+          <div class="previous-btn" (click)="getPreviousRows()">
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.56641 8.44531L4.51172 9.5L0.0117188 5L4.51172 0.5L5.56641 1.55469L2.12109 5L5.56641 8.44531Z"
+                fill="#8083A3"
+              />
+            </svg>
+          </div>
+          <div class="next-btn" (click)="getNextRows()">
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.433594 8.44531L3.87891 5L0.433594 1.55469L1.48828 0.5L5.98828 5L1.48828 9.5L0.433594 8.44531Z"
+                fill="#8083A3"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="contact-detailes">
+      <div class="search-bar-input">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for a contact"
+        />
+      </div>
+      <div class="row-main">
+        <div class="name-deatailes">
+          <label for="">Name, email or phone number</label>
+        </div>
+        <div class="search-icon">
+          <span><img src="../../../assets/images/svg/search.svg" /></span>
+        </div>
+      </div>
+    </div>
+
+    <div *ngFor="let item of userList" class="parent-left-user-container">
+      <div class="left-user-wrapper" (click)="getUserContactDetail(item)">
+        <div class="user-left-detailes row-main">
+          <div class="user-img">
+            <span>
+              <img
+                *ngIf="item.imageUrl"
+                src="{{ item.imageUrl }}"
+                class="profileImage"
+                alt="Cinque Terre"
+              />
+            </span>
+
+            <!-- <span class="online-icon"></span> -->
+            <span
+              [ngClass]="item.isActive == true ? 'online-icon' : 'offline-icon'"
+            ></span>
+          </div>
+          <div class="usr-content">
+            <div class="user-name">
+              <label class="">{{ item.userName }}</label>
+            </div>
+            <div class="user-designnation">
+              <label class="">{{ item.designation }}</label>
+            </div>
+          </div>
+        </div>
+        <div class="user-right-data">
+          <div class="contact-icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.0443 8C12.0443 8.21094 11.9623 8.38672 11.7982 8.52734C11.6576 8.66797 11.4818 8.73828 11.2709 8.73828H3.78259L0.794312 11.7617V1.25C0.794312 1.03906 0.864624 0.863281 1.00525 0.722656C1.14587 0.582031 1.32166 0.511719 1.53259 0.511719H11.2709C11.4818 0.511719 11.6576 0.582031 11.7982 0.722656C11.9623 0.863281 12.0443 1.03906 12.0443 1.25V8ZM15.0326 3.5C15.2435 3.5 15.4193 3.57031 15.5599 3.71094C15.7006 3.85156 15.7709 4.02734 15.7709 4.23828V15.4883L12.7826 12.5H4.52087C4.30994 12.5 4.13416 12.4297 3.99353 12.2891C3.85291 12.1484 3.78259 11.9727 3.78259 11.7617V10.25H13.5209V3.5H15.0326Z"
+              />
+            </svg>
+          </div>
+          <div class="contact-icon">
+            <svg
+              width="15"
+              height="14"
+              viewBox="0 0 15 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2943 9.53125C13.5052 9.53125 13.681 9.60156 13.8217 9.74219C13.9623 9.88281 14.0326 10.0586 14.0326 10.2695V12.8711C14.0326 13.457 13.7865 13.75 13.2943 13.75C9.80212 13.75 6.80212 12.4961 4.29431 9.98828C1.7865 7.48047 0.532593 4.48047 0.532593 0.988281C0.532593 0.496094 0.825562 0.25 1.4115 0.25H4.01306C4.224 0.25 4.39978 0.320312 4.54041 0.460938C4.68103 0.601562 4.75134 0.777344 4.75134 0.988281C4.75134 1.90234 4.89197 2.78125 5.17322 3.625C5.26697 3.92969 5.20837 4.1875 4.99744 4.39844L3.55603 5.66406C4.63416 7.91406 6.35681 9.61328 8.724 10.7617L9.88416 9.28516C10.0248 9.14453 10.2006 9.07422 10.4115 9.07422C10.5287 9.07422 10.6107 9.08594 10.6576 9.10938C11.5013 9.39062 12.3802 9.53125 13.2943 9.53125Z"
+              />
+            </svg>
+          </div>
+          <div class="contact-icon">
+            <svg
+              width="13"
+              height="4"
+              viewBox="0 0 13 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.22791 0.945312C5.53259 0.640625 5.88416 0.488281 6.28259 0.488281C6.68103 0.488281 7.03259 0.640625 7.33728 0.945312C7.64197 1.25 7.79431 1.60156 7.79431 2C7.79431 2.39844 7.64197 2.75 7.33728 3.05469C7.03259 3.35938 6.68103 3.51172 6.28259 3.51172C5.88416 3.51172 5.53259 3.35938 5.22791 3.05469C4.92322 2.75 4.77087 2.39844 4.77087 2C4.77087 1.60156 4.92322 1.25 5.22791 0.945312ZM9.72791 0.945312C10.0326 0.640625 10.3842 0.488281 10.7826 0.488281C11.181 0.488281 11.5326 0.640625 11.8373 0.945312C12.142 1.25 12.2943 1.60156 12.2943 2C12.2943 2.39844 12.142 2.75 11.8373 3.05469C11.5326 3.35938 11.181 3.51172 10.7826 3.51172C10.3842 3.51172 10.0326 3.35938 9.72791 3.05469C9.42322 2.75 9.27087 2.39844 9.27087 2C9.27087 1.60156 9.42322 1.25 9.72791 0.945312ZM0.727905 0.945312C1.03259 0.640625 1.38416 0.488281 1.78259 0.488281C2.18103 0.488281 2.53259 0.640625 2.83728 0.945312C3.14197 1.25 3.29431 1.60156 3.29431 2C3.29431 2.39844 3.14197 2.75 2.83728 3.05469C2.53259 3.35938 2.18103 3.51172 1.78259 3.51172C1.38416 3.51172 1.03259 3.35938 0.727905 3.05469C0.423218 2.75 0.270874 2.39844 0.270874 2C0.270874 1.60156 0.423218 1.25 0.727905 0.945312Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-detail-container" *ngIf="!isMobileView && userInfo && userInfo.contactId > 0">
+    <div class="detailes-wrapper">
+      <app-contact-detail [userInfo]="userInfo"></app-contact-detail>
+    </div>
+  </div>
+</div>
+<div class="contact-detail-modal">
+  <div
+    class="contact-detail-container-mobile modal fade"
+    #mobileContactDetailDiv
+    id="myModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Detail</h5>
+          <button
+            type="button"
+            class="btn-close"
+            (click)="hideFormModal()"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div
+            class="contact-detail-mobile-container"
+            *ngIf="isMobileView && userInfo && userInfo.contactId > 0"
+          >
+            <div class="detailes-wrapper">
+              <app-contact-detail [userInfo]="userInfo"></app-contact-detail>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="hideFormModal()"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

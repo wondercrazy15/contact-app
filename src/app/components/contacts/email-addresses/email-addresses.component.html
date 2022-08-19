@@ -1,0 +1,4 @@
+<div *ngFor="let email of emails" class="email-label">
+    <label>{{email.value}}</label>
+    <span *ngIf="email.isPrimary" class="primary-label">Primary</span>
+  </div>

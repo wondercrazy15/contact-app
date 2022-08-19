@@ -1,0 +1,229 @@
+@import "../../../assets/variable.sass"
+
+.main-content-wrapper
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+@media (min-width: 992px)
+    .main-content-wrapper
+        flex-wrap: unset
+.contact-left-sidebar
+    background:$left-background
+    padding-bottom: 16px
+    width:100%
+    height: 100vh
+    display:flex
+    z-index:999999
+@media (min-width: 992px)
+    .contact-left-sidebar
+        max-width:435px
+@media (max-width: 992px)
+    .contact-detail-container
+      display: none
+    .contact-detail-container-mobile
+      display: block
+@media (min-width: 1200px)
+    .contact-left-sidebar
+        max-width:525px
+@media (min-width: 1366px)
+    .contact-left-sidebar
+        max-width:636px
+
+.top-sidebar
+    padding:22px 33px 22px 23px
+    border-bottom:1px solid $border-color
+
+.topleft-content
+    display: flex
+    align-items: center
+
+.topleft-content .contact-title
+    margin:0 0 0 15px
+    font-weight: 700
+    font-size: 20px
+    line-height: 32px
+
+
+.navbar
+    padding:0
+
+.navbar button
+    display: flex
+    align-items: center !important
+    justify-content: center
+    background:$white
+    width:40px
+    height:40px
+    padding:11px
+    border-radius:10px
+    border:1px solid $border-color
+
+.navbar button .navbaricon
+    height: auto
+    display: flex
+
+.navbar button .navbaricon svg
+    width:18px
+    height:18px
+
+.top-right-content
+    display: flex
+
+.previous-btn, .next-btn
+    cursor: pointer
+
+.top-right-content .previous-btn
+    display: flex
+    align-items: center !important
+    justify-content: center
+    background:$white
+    width:40px
+    height:40px
+    padding:11px
+    border-radius:10px
+    border:1px solid $border-color
+    margin-right:8px
+.top-right-content .next-btn
+    display: flex
+    align-items: center !important
+    justify-content: center
+    background:$white
+    width:40px
+    height:40px
+    padding:11px
+    border-radius:10px
+    border:1px solid $border-color
+
+.contact-detailes
+    padding:28px 24px 20px 18px
+@media (min-width: 1440px)
+    .contact-detailes
+        padding:28px 52px 20px 36px
+.search-input
+    border: none !important
+    background: transparent !important
+    padding:0
+.search-input:focus-visible
+    outline: none
+
+.search-input::placeholder
+    color:$placeholder-color
+    font-weight: 400
+    font-size: 14px
+    line-height: 21px
+
+.name-deatailes label
+    font-weight: 700
+    color: $text-color
+    font-size: 16px
+    line-height: 19px
+    margin-top:8px
+
+.row-main
+    display: flex
+    justify-content: space-between
+
+.parent-left-user-container
+    &:hover
+        cursor: pointer
+
+.left-user-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: 12px
+    padding:14px 18px
+    &:hover
+        cursor: pointer
+
+
+@media (min-width: 1440px)
+    .left-user-wrapper
+         max-width: 601px
+         margin: 0 auto
+.left-user-wrapper .user-img
+    display: flex
+    width: auto
+    height: auto
+    position: relative
+.left-user-wrapper .user-img span
+    width: 36px
+    height: 36px
+.left-user-wrapper .user-img .online-icon
+    background: $green
+    border: 2px solid $white
+    width: 8px
+    padding: 4px
+    height: 8px
+    border-radius: 50%
+    position: absolute
+    bottom: 0
+    right: 0
+.left-user-wrapper .user-img .offline-icon
+    background: $light-orange
+    border: 2px solid $white
+    width: 8px
+    padding: 4px
+    height: 8px
+    border-radius: 50%
+    position: absolute
+    bottom: 0
+    right: 0
+.left-user-wrapper .user-img  img
+    width:36px
+    height:36px
+    border-radius:10px
+
+.user-left-detailes
+    align-items: flex-start
+    &:hover
+        cursor: pointer
+
+.usr-content
+    margin-left:18px
+
+.user-name
+    display: flex
+
+.user-designnation
+    display: flex
+
+.user-name label
+    font-weight: 700
+    font-size: 14px
+    line-height: 21px
+
+.user-designnation label
+    font-weight: 400
+    font-size: 14px
+    line-height: 21px
+    color:$placeholder-color
+
+.user-right-data
+    display: flex
+    align-items: center
+    &:hover
+        cursor: pointer
+
+
+.user-right-data .contact-icon
+    background: $white
+    border: 1px solid  $border-color
+    border-radius: 10px
+    width:36px
+    height:36px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.user-right-data .contact-icon:nth-child(2)
+    margin:0 6px
+
+.user-right-data .contact-icon:hover
+    background: linear-gradient(0deg, rgba(77, 76, 172, 0.1), rgba(77, 76, 172, 0.1)), $white
+
+.user-right-data .contact-icon svg
+    fill:$placeholder-color
+
+.user-right-data .contact-icon:hover svg
+    fill:$purple

@@ -1,0 +1,209 @@
+@import "../../../../assets/variable.sass"
+.contact-detail-container
+    padding:30px 18px
+@media (min-width: 992px)
+    .contact-detail-container, .contact-detail-mobile-container
+        padding: 62px 36px 295px 36px
+        display: block
+    .contact-detail-container-mobile
+      display: none
+@media (min-width: 1200px)
+    .contact-detail-container
+        padding: 62px 117px 295px 48px
+.contact-detail-modal
+    position: absolute
+    z-index: 1000000
+.contact-detail-container-mobile .modal-footer .btn-secondary
+    background:$purple
+    color:$white
+.contact-detail-container-mobile .modal-dialog
+    top: 50%
+    position: absolute
+    transform: translate(0, -50%) !important
+
+@media (min-width: 1200px)
+    .detailes-wrapper
+        max-width:639px
+
+.contact-user-detiles-wrapper
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: center
+
+@media (min-width: 568px)
+   .contact-user-detiles-wrapper
+      margin-left: 86px
+      max-width: 405px
+      justify-content: flex-start
+.contact-user-detiles-wrapper .user-contact-img
+    width: 100%
+    text-align: center
+@media (min-width: 568px)
+    .contact-user-detiles-wrapper .user-contact-img
+        width: auto
+        text-align: left
+
+.contact-user-detiles-wrapper .user-contact-img img
+     height: 114px
+     width: 114px
+     border-radius: 26px
+     margin: 0
+@media (min-width: 568px)
+   .contact-user-detiles-wrapper .user-contact-img img
+     margin: 0 20px 0 0
+.contact-user-detiles-wrapper .user-contact-detailes
+   margin: 20px 0 0 0
+@media (min-width: 568px)
+   .contact-user-detiles-wrapper .user-contact-detailes
+     margin: 0
+.contact-user-detiles-wrapper .user-contact-detailes .username
+    color:$text-color
+    margin: 0
+    font-weight: 700
+    font-size: 20px
+    line-height: 32px
+    text-align: center
+    width: 100%
+@media (min-width: 568px)
+    .contact-user-detiles-wrapper .user-contact-detailes .username
+        width: auto
+        text-align: left
+.contact-user-detiles-wrapper .user-contact-detailes .user-designation
+    color: $placeholder-color
+    margin:0
+    font-size: 14px
+    line-height: 21px
+    text-align: center
+    width: 100%
+@media (min-width: 568px)
+   .contact-user-detiles-wrapper .user-contact-detailes .user-designation
+         width: auto
+         text-align: left
+
+.contact-user-detiles-wrapper .user-contact-detailes .user-right-brief-detailes
+    margin-top:18px
+    display: flex
+    align-items: flex-start
+
+
+.contact-user-detiles-wrapper .user-contact-detailes .user-right-brief-detailes .message-box
+    background:$purple
+    border-radius:10px
+    padding: 9px 12px 9px 18px
+
+.user-contact-detailes .user-right-brief-detailes .message-box .message-text
+    color:$white
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    margin-left:6px
+
+.contact-icon-wrapper
+    display: flex
+
+.user-contact-detailes .user-right-brief-detailes .contact-icon
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $white
+    border: 1px solid $border-color
+    border-radius: 10px
+    width:42px
+    height:42px
+    margin-left: 6px
+
+.user-bio
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 39px
+@media (min-width: 568px)
+    .user-bio
+         padding-left: 31px
+.bio-title
+    width: 25%
+@media (min-width: 568px)
+    .bio-title
+        width: auto
+.bio-title h3
+    margin:0
+    color: $placeholder-color
+    font-size: 14px
+    line-height: 21px
+
+.bio-description
+    width: 100%
+@media (min-width: 568px)
+    .bio-description
+       margin-left: 34px
+
+.bio-description .phone-primary
+    display: flex
+    align-items: flex-start
+    width: 100%
+    justify-content: space-between
+
+
+.bio-description p
+    margin:0
+    color:$text-color
+    font-size: 14px
+    line-height: 21px
+
+.email-bio
+    display: flex
+    align-items: flex-start
+    margin-top:49px
+@media (min-width: 568px)
+    .email-bio
+         padding-left:18px
+.dial-bio
+    display: flex
+    align-items: flex-start
+    margin-top: 26px
+@media (min-width: 568px)
+    .dial-bio
+         padding-left: 27px
+.meeting-bio
+    display: flex
+    align-items: flex-start
+    margin-top: 25px
+
+.calling-bio
+    display: flex
+    align-items: flex-start
+    margin-top: 30px
+@media (min-width: 568px)
+    .calling-bio
+         padding-left: 12px
+.calling-bio .bio-description p:nth-child(1)
+    margin-bottom:11px
+
+.social-detailes
+   display: flex
+   align-items: center
+   margin-top: 30px
+@media (min-width: 568px)
+    .social-detailes
+          padding-left:15px
+.social-detailes .bio-title
+    width: 20%
+@media (min-width: 568px)
+   .social-detailes .bio-title
+        width: auto
+.social-links
+    display: flex
+@media (min-width: 568px)
+   .social-links
+          margin-left: 35px
+.social-links .link-item
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $white
+    border: 1px solid $border-color
+    border-radius: 10px
+    width:42px
+    height:42px
+    margin-right: 6px
