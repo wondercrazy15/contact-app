@@ -1,4 +1,32 @@
 @import "../../../../assets/variable.sass"
+
+@media (min-width: 568px)
+  .contact-detail-container-mobile
+     --bs-modal-width: 100% !important
+@media (min-width: 992px)
+  .contact-detail-container-mobile
+     display: none !important
+@media (min-width: 992px)
+  .modal-backdrop.show
+    opacity: 0 !important
+
+// .hide-image-padding
+//   padding:170px 0 0 0
+// @media (min-width: 568px)
+//   .hide-image-padding
+//       padding: 375px 0 0 0
+// @media (min-width: 768px)
+//   .hide-image-padding
+//       padding: 0
+
+// .show-image-padding
+//   padding:215px 0 0 0
+// @media (min-width: 568px)
+//   .show-image-padding
+//       padding: 345px 0 0 0
+// @media (min-width: 768px)
+//   .show-image-padding
+//       padding: 0
 .contact-detail-container
     padding:30px 18px
 @media (min-width: 992px)
@@ -17,10 +45,12 @@
     background:$purple
     color:$white
 .contact-detail-container-mobile .modal-dialog
-    top: 50%
-    position: absolute
-    transform: translate(0, -50%) !important
-
+    // top: 50%
+    // position: absolute
+    // left: 50%
+    // width: 100%
+    // transform: translate(-50%, -50%) !important
+    margin: 0
 @media (min-width: 1200px)
     .detailes-wrapper
         max-width:639px

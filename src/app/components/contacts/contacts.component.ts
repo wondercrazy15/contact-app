@@ -69,6 +69,7 @@ export class ContactsComponent implements OnInit {
       const userInfoObj = res
       userInfoObj.userName = contactDetail.userName
       userInfoObj.designation = contactDetail.designation
+      userInfoObj.imageUrl = contactDetail.imageUrl
       this.userInfo = userInfoObj
       if (this.isMobileView) {
         if (!this.contactDetailModal)

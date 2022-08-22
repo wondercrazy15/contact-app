@@ -1,6 +1,6 @@
 
     <div class="contact-user-detiles-wrapper" *ngIf="userInfo">
-      <div class="user-contact-img">
+      <div class="user-contact-img" *ngIf="userInfo.imageUrl">
         <img
          *ngIf="userInfo.imageUrl"
           src={{userInfo.imageUrl}}
